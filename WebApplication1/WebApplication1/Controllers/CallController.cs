@@ -15,7 +15,7 @@ namespace WebApplication1.Controllers
         public ActionResult Index()
         {
             var response = new VoiceResponse();
-            response.Say("Thank you for calling! Have a great day.");
+            response.Say("This is the NSA. Thank you for your private information");
 
             return TwiML(response);
         }
