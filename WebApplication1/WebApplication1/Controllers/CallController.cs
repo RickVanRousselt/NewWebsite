@@ -8,7 +8,7 @@ using Twilio.TwiML;
 
 namespace WebApplication1.Controllers
 {
-    public class CallController
+    public class CallController : Controller
     {
         [System.Web.Http.HttpPost]
         public TwiML Index()
