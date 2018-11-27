@@ -4,19 +4,20 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Mvc;
+using Twilio.AspNet.Mvc;
 using Twilio.TwiML;
 
 namespace WebApplication1.Controllers
 {
-    public class CallController : Controller
+    public class CallController : TwilioController
     {
         [System.Web.Http.HttpPost]
-        public TwiML Index()
+        public ActionResult Index()
         {
             var response = new VoiceResponse();
             response.Say("Thank you for calling! Have a great day.");
 
-            return response;
+            return TwiML(response);
         }
     }
 }
